@@ -1,0 +1,14 @@
+syntax "html" "\.htm[l]?$"
+header "<!doctype html>"
+magic "HTML document"
+
+KEYWORD:  "\<(accept|accept-charset|accesskey|action|alt|async|autocomplete|autofocus|autoplay|border|challenge|charset|checked|cite|class|cols|colspan|content|contenteditable|contextmenu|controls|coords|crossorigin|data-[a-z-]+|datetime|default|defer|dir|dirname|disabled|draggable|dropzone|enctype|for|form|formaction|formenctype|formmethod|formnovalidate|formtarget|headers|height|hidden|high|href|hreflang|http-equiv|icon|id|ismap|keytype|kind|label|lang|list|loop|low|manifest|max|maxlength|media|mediagroup|method|min|multiple|muted|name|novalidate|open|optimum|pattern|placeholder|poster|preload|pubdate|radiogroup|readonly|rel|required|reversed|rows|rowspan|sandbox|spellcheck|scope|scoped|seamless|selected|shape|size|sizes|span|src|srcdoc|srclang|start|step|style|tabindex|target|title|type|typemustmatch|usemap|value|width|wrap)\>"
+FUNCTION: ">" "</?(a|abbr|address|area|article|aside|audio|b|base|bdo|blockquote|body|br|button|canvas|caption|cite|code|col|colgroup|command|datalist|dd|del|details|dfn|div|dl|dt|em|embed|eventsource|fieldset|figcaption|figure|footer|form|h1|h2|h3|h4|h5|h6|head|header|hgroup|hr|html|i|iframe|img|input|ins|kbd|keygen|label|legend|li|link|mark|map|menu|meta|meter|nav|noscript|object|ol|optgroup|option|output|p|param|pre|progress|q|ruby|rp|rt|samp|script|section|select|small|source|span|strong|style|sub|summary|sup|table|tbody|td|textarea|tfoot|th|thead|time|title|tr|ul|var|video|wbr)[ >]"
+OPERATOR: "="
+PLAIN:    start=">" end="<"
+FUNCTION: "[<>]"
+STRING:   "\"(\\.|[^\\\"])*\"|'(\\.|[^\\'])*'"
+COMMENT:  start="<!--" end="-->"
+COMMENT:  "<!(doctype|DOCTYPE)[^>]*>"
+
++LINT

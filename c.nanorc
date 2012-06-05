@@ -1,0 +1,23 @@
+syntax "c" "\.(c(c|pp|xx)?|C)$" "\.(h(h|pp|xx)?|H)$" "\.ii?$"
+magic "ASCII C(\+\+)? program text"
+
+TYPE:     "\<(float|double|bool|char|int|short|long|sizeof|enum|void|static|const|struct|union|typedef|extern|(un)?signed|inline)\>"
+TYPE:     "\<((s?size)|((u_?)?int(8|16|32|64|ptr)))_t\>"
+TYPE:     "\<[a-z_]+_t\>"
+KEYWORD:  "\<(for|if|while|do|else|case|default|switch)\>"
+KEYWORD:  "\<(try|throw|catch|operator|new|delete)\>"
+KEYWORD:  "\<(goto|continue|break|return)\>"
+OPERATOR: "[-+/*=<>?:!~%]" "->"
+NUMBER:   "\<([0-9]+)\>"
+NUMBER:   "0x[0-9a-fA-F]*"
+COMMENT:  "^[[:space:]]*#[[:space:]]*(define|include(_next)?|(un|ifn?)def|endif|el(if|se)|if|warning|error|pragma)"
+VARIABLE: "\<[A-Z_][0-9A-Z_]+\>"
+ESCAPE:   "'([^'\]|(\\["'abfnrtv\\]))'"
+ESCAPE:   "'\\(([0-3]?[0-7]{1,2}))'"
+ESCAPE:   "'\\x[0-9A-Fa-f]{1,2}'"
+WARNING:  "__attribute__[[:space:]]*\(\([^)]*\)\)" "__(aligned|asm|builtin|hidden|inline|packed|restrict|section|typeof|weak)__"
+STRING:   "<[^= 	]*>" ""(\\.|[^"])*""
+COMMENT:  "//.*"
+COMMENT:  start="/\*" end="\*/"
+
++LINT

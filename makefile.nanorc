@@ -1,0 +1,13 @@
+syntax "makefile" "Makefile[^/]*$" "\.mk$"
+
+OPERATOR: "[:=,]"
+KEYWORD:  "\<(ifeq|ifdef|ifneq|ifndef|else|endif)\>"
+FUNCTION: "^[^   ]+:"
+STRING:   "\"(\\.|[^\\\"])*\"|'(\\.|[^\\'])*'"
+VARIABLE: "\$+[{(][a-zA-Z0-9_-]+[})]"
+VARIABLE: "\$[@^<*]"
+ESCAPE:   "\\.?"
+COMMENT:  "(\s|^|@)#.*$"
+
+# Trailing whitespace
+color ,green "[[:space:]]+$"

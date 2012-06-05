@@ -1,0 +1,36 @@
+syntax "markdown" "\.(md|mkd|mkdn|markdown)$"
+
+# Quotation
+color cyan "^>.*"
+
+# Emphasis
+color green " _[^_]*_"
+color green " \*[^*]*\*"
+color brightgreen " __[^_]*__"
+color brightgreen " \*\*[^*]*\*\*"
+
+# Heading
+color brightblue "^====(=*)"
+color brightblue "^----(-*)"
+color brightblue "^#.*"
+
+# List
+color brightgreen "^[\*+-] "
+color brightgreen "^[0-9]+\. "
+
+# URL or HTML
+color brightmagenta start="<" end=">"
+
+# Link
+color brightmagenta "\[.*\]\(.*\)"
+color brightmagenta "\[.*\] ?\[.*\]"
+color brightmagenta "^\[.*\]:\s*.*"
+
+# Image
+color brightmagenta "!\[.*\]\(.*\)"
+
+# Code
+color cyan "`[^`]*`"
+color cyan "^    .*"
+
++LINT

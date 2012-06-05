@@ -1,0 +1,11 @@
+syntax "systemd" "\.(service|socket)$"
+header "^\[Unit\]$"
+
+KEYWORD:  "^(After|Alias|AllowIsolate|Also|Before|BindTo|ConditionCapability|ConditionDirectoryNotEmpty|ConditionFileIsExecutable|ConditionKernelCommandLine|ConditionNull|ConditionPathExists|ConditionPathExistsGlob|ConditionPathIsDirectory|ConditionPathIsMountPoint|ConditionPathIsSymbolicLink|ConditionSecurity|ConditionVirtualization|Conflicts|DefaultDependencies|Description|IgnoreOnIsolate|IgnoreOnSnapshot|JobTimeoutSec|Names|OnFailure|OnFailureIsolate|PropagateReloadFrom|PropagateReloadTo|RefuseManualStart|RefuseManualStop|Requires|RequiresOverridable|Requisite|RequisiteOverridable|StopWhenUnneeded|Timeout|Wanted|WantedBy|Wants)="
+KEYWORD:  "^(After|Before|BusName|Conflicts|DefaultDependencies|ExecReload|ExecStart|ExecStartPost|ExecStartPre|ExecStop|ExecStopPost|FsckPassNo|GuessMainPID|KillMode|KillSignal|NonBlocking|NotifyAccess|PermissionsStartOnly|PIDFile|RemainAfterExit|Requires|Restart|RestartSec|RootDirectory|RootDirectoryStartOnly|SendSIGKILL|Service|Sockets|SysVStartPriority|TimeoutSec|Type|User)="
+OPERATOR: "="
+FUNCTION: "^\[(Unit|Install|Service)\]$"
+VARIABLE: "\$MAINPID"
+COMMENT:  "(^|[[:space:]])#.*$"
+
++LINT

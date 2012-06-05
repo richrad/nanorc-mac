@@ -1,0 +1,17 @@
+syntax "sh" "\.sh$" "\.bash$" "bashrc$" "bash_profile$"
+magic "(POSIX|Bourne.*) shell script text"
+header "^#!.*/(ba|k|pdk)?sh[-0-9_]*"
+
+FUNCTION: "^[A-Za-z0-9_]+[[:space:]]*\(\)"
+KEYWORD:  "\<(case|do|done|elif|else|esac|exit|fi|for|function|if|in|local|read|return|select|shift|then|time|until|while)\>"
+FUNCTION: "\<(cat|cd|chmod|chown|cp|echo|env|export|grep|install|let|ln|make|mkdir|mv|rm|sed|set|tar|touch|umask|unset)\>"
+OPERATOR: "(\{|\}|\(|\)|\;|\]|\[|`|\\|\$|<|>|!|=|&|\|)"
+OPERATOR: "-(eq|ne|gt|lt|ge|le|s|n|z)\>"
+STRING:   ""(\\.|[^"])*""
+VARIABLE: "\$\{?[A-Za-z0-9_!@#$*?-]+\}?"
+VARIABLE: "`[^`]*`"
+STRING:   "'(\\.|[^'])*'"
+ESCAPE:   "\\.?"
+COMMENT:  "(^|[[:space:]])#.*$"
+
++LINT

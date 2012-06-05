@@ -1,0 +1,20 @@
+syntax "JavaScript" "\.js$"
+
+NUMBER:   "\<[-+]?([1-9][0-9]*|0[0-7]*|0x[0-9a-fA-F]+)([uU][lL]?|[lL][uU]?)?\>"
+NUMBER:   "\<[-+]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)([EePp][+-]?[0-9]+)?[fFlL]?"
+NUMBER:   "\<[-+]?([0-9]+[EePp][+-]?[0-9]+)[fFlL]?"
+KEYWORD:  "\<(break|case|catch|continue|default|delete|do|else|finally)\>"
+KEYWORD:  "\<(for|function|get|if|in|instanceof|new|null|return|set|switch)\>"
+KEYWORD:  "\<(switch|this|throw|try|typeof|undefined|var|void|while|with)\>"
+TYPE:     "\<(Array|Boolean|Date|Enumerator|Error|Function|Math)\>"
+TYPE:     "\<(Number|Object|RegExp|String)\>"
+OPERATOR: "[-+/*=<>!~%?:&|]"
+BOOLEAN:  "\<(true|false)\>"
+REGEXP:   "/[^*]([^/]|(\\/))*[^\\]/[gim]*"
+STRING:   "L?\"(\\"|[^"])*\""
+STRING:   "L?'(\'|[^'])*'"
+ESCAPE:   "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
+COMMENT:  start="/\*" end="\*/"
+COMMENT:  "//.*$"
+
++LINT

@@ -1,0 +1,21 @@
+#!/bin/sed -f
+
+s|^PLAIN:|color black|g;
+s|^TYPE:|color brightgreen|g;
+s|^STRING:|color yellow|g;
+s|^NUMBER:|color blue|g;
+s|^BOOLEAN:|color brightmagenta|g;
+s|^REGEXP:|color brightcyan|g;
+s|^VARIABLE:|color brightyellow|g;
+s|^OPERATOR:|color red|g;
+s|^KEYWORD:|color green|g;
+s|^~KEYWORD:|icolor green|g;
+s|^FUNCTION:|color brightblue|g;
+s|^ESCAPE:|color magenta|g;
+s|^COMMENT:|color cyan|g;
+s|^ENABLED:|color brightgreen|g;
+s|^DISABLED:|color brightred|g;
+s|^WARNING:|color ,red|g;
+s|^+TODO|color brightcyan "TODO:?"|g;
+s|^+LINT|color ,green "[[:space:]]+$"\ncolor ,red "\t*"|g;
+s|^+LONG-LINE-WARNING|color ,red "^.{81,}$"|g;

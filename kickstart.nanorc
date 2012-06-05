@@ -1,0 +1,10 @@
+syntax "KickStart" "\.ks$" "\.kickstart$"
+
+FUNCTION: "%[a-z]+"
+KEYWORD:  "^[[:space:]]*(install|cdrom|text|graphical|volgroup|logvol|reboot|timezone|lang|keyboard|authconfig|firstboot|rootpw|user|firewall|selinux|repo|part|partition|clearpart|bootloader)"
+KEYWORD:  "--(name|mirrorlist|baseurl|utc)(=|\>)"
+VARIABLE: "\$(releasever|basearch)\>"
+DISABLED: "^-@?[a-zA-Z0-9-]+"
+COMMENT:  "(^|[[:space:]])#.*$"
+
++LINT

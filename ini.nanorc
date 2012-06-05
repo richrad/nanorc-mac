@@ -1,0 +1,10 @@
+syntax "ini" "\.(desktop|ini|override|repo)$" "gitconfig$"
+
+OPERATOR: "[=;]" "\[" "\]"
+BOOLEAN:  "\<(true|false)\>"
+VARIABLE: "^[[:space:]]*[^=]*="
+FUNCTION: "^\[.*\]$"
+STRING:   "\"(\\.|[^\\\"])*\"|'(\\.|[^\\'])*'"
+COMMENT:  "#.*$"
+
++LINT

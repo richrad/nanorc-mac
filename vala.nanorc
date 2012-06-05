@@ -1,0 +1,17 @@
+syntax "vala" "\.vala$"
+
+TYPE:     "\<(float|double|bool|char|int|uint|short|long|enum|void|static|const|struct|union|typedef|extern|(un)?signed|inline)\>"
+FUNCTION: "\<(assert|warning)\s*\("
+PLAIN:    "[(]"
+KEYWORD:  "\<(for|if|while|do|else|case|default|switch)\>"
+KEYWORD:  "\<(try|throw|catch|operator|new|delete)\>"
+KEYWORD:  "\<(goto|continue|break|return)\>"
+KEYWORD:  "\<(class|override|private|public|signal|this|weak)\>"
+BOOLEAN:  "\<(false|true|null)\>"
+NUMBER:   "\<([0-9]+)\>"
+OPERATOR: "[-+/*=<>?:!~%&|]" "->"
+STRING:   "\"(\\.|[^\\\"])*\"|'(\\.|[^\\'])*'"
+COMMENT:  "//.*"
+COMMENT:  start="/\*" end="\*/"
++TODO
++LINT

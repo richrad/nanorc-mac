@@ -1,0 +1,10 @@
+syntax "patch" "\.(patch|diff)$"
+magic "diff output text"
+
+color brightgreen "^\+.*"
+color green "^\+\+\+.*"
+color brightred "^-.*"
+color red "^---.*"
+color blue "^@@.*"
+color magenta "^diff.*"
+

@@ -1,0 +1,45 @@
+set tabstospaces
+set tabsize 4
+set fill 76
+set autoindent
+set morespace
+set quickblank
+set multibuffer
+set historylog
+set undo
+set smooth
+set const
+set nohelp
+set regexp
+
+# File
+bind ^O insert main
+bind ^S writeout main
+bind ^Q exit main
+bind ^W exit main
+
+# Edit
+bind ^A mark main
+bind ^X cut main
+bind ^V uncut main
+bind ^Z undo main
+bind ^Y redo main
+
+# Search
+bind ^F whereis all
+bind ^H replace all
+bind ^R regex all
+bind ^L gotoline main
+bind F3 searchagain main
+bind ^] findbracket main
+
+# Other
+bind ^C cancel all
+bind ^T verbatim main
+bind F12 autoindent main
+
+# Default highlighting
+syntax "default"
+ESCAPE:  "\\.?"
+COMMENT: "(^|[[:space:]])#.*$"
++LINT
