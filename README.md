@@ -23,5 +23,12 @@ Use `make install THEME=original`, where `original` is the name of a [theme].
 All `.nanorc` files will be concatenated together, themed according to the
 `THEME` variable and installed to `~/.nanorc`.
 
+[main.nanorc] contains runtime options and key bindings. It can be safely
+deleted or changed according to preference. The default bindings try to stay
+close to GUI/[GNOME] conventions where possible
+(e.g. `Ctrl+S` for save, `Ctrl+O` for open).
+
 [GNU nano]: http://www.nano-editor.org/
 [theme]: https://github.com/craigbarnes/nanorc/tree/master/themes
+[main.nanorc]: https://github.com/craigbarnes/nanorc/blob/master/main.nanorc
+[GNOME]: http://www.gnome.org/
