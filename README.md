@@ -1,7 +1,7 @@
 nanorc
 ======
 
-Extra syntax highlighting definitions for the [GNU nano] text editor.
+Better syntax highlighting definitions for the [GNU nano] text editor.
 
 Description
 -----------
