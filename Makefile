@@ -1,4 +1,4 @@
-THEME = original
+THEME = light
 
 nanorc: themes/$(THEME) *.nanorc
 	cat *.nanorc | $< > $@

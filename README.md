@@ -19,7 +19,7 @@ different languages and also to keep the definitions clear and maintainable.
 Installation
 ------------
 
-Use `make install THEME=original`, where `original` is the name of a [theme].
+Use `make install THEME=light`, where `light` is the name of a [theme].
 All `.nanorc` files will be concatenated together, themed according to the
 `THEME` variable and installed to `~/.nanorc`.
 
