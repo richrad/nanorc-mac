@@ -15,6 +15,8 @@ set regexp
 # File
 bind ^O insert main
 bind ^S writeout main
+bind ^Q cancel all
+bind ^W cancel all
 bind ^Q exit main
 bind ^W exit main
 
@@ -28,8 +30,10 @@ bind ^Y redo main
 # Search
 bind ^F whereis all
 bind ^H replace all
-bind ^I casesens all
-bind ^R regex all
+bind ^I casesens search
+bind ^I casesens replace
+bind ^R regex search
+bind ^R regex replace
 bind ^L gotoline main
 bind F3 searchagain main
 bind ^] findbracket main
