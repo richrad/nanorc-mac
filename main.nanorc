@@ -28,6 +28,7 @@ bind ^Y redo main
 # Search
 bind ^F whereis all
 bind ^H replace all
+bind ^I casesens all
 bind ^R regex all
 bind ^L gotoline main
 bind F3 searchagain main
