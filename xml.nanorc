@@ -1,6 +1,5 @@
 syntax "xml" "\.([jrs]html?|sgml?|xml|opml|xslt?)$"
 header "<\?xml"
-magic "XML.*document text"
 
 FUNCTION: start="<" end=">"
 KEYWORD:  " [a-z_-]+="

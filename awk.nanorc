@@ -1,5 +1,4 @@
 syntax "awk" "\.awk$"
-magic "awk.*script text"
 header "^#!.*bin/awk"
 
 VARIABLE: "\$[A-Za-z0-9_!@#$*?-]+"

@@ -1,5 +1,4 @@
 syntax "patch" "\.(patch|diff)$"
-magic "diff output text"
 
 color brightgreen "^\+.*"
 color green "^\+\+\+.*"

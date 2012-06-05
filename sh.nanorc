@@ -1,5 +1,4 @@
 syntax "sh" "\.sh$" "\.bash$" "bashrc$" "bash_profile$"
-magic "(POSIX|Bourne.*) shell script text"
 header "^#!.*/(ba|k|pdk)?sh[-0-9_]*"
 
 FUNCTION: "^[A-Za-z0-9_]+[[:space:]]*\(\)"
