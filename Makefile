@@ -1,13 +1,7 @@
 THEME = light
 
-nanorc: themes/$(THEME) *.nanorc
-	cat *.nanorc | $< > $@
-
-install: nanorc
-	install -pm0644 nanorc ~/.nanorc
-
-clean:
-	rm -f nanorc
+install: themes/$(THEME)
+	cat *.nanorc | $< > ~/.nanorc
 
 
-.PHONY: install clean
+.PHONY: install
