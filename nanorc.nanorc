@@ -1,12 +1,13 @@
 syntax "nanorc" "nanorc$"
 
-TYPE:    "^[[:space:]]*i?color[[:space:]]*(bright)?(white|black|red|blue|green|yellow|magenta|cyan)?(,(white|black|red|blue|green|yellow|magenta|cyan))?\>"
-KEYWORD: "^[[:space:]]*(set|unset)[[:space:]]+(allow_insecure_backup|autoindent|backup|backupdir|backwards|boldtext|brackets|casesensitive|const|cut|fill|historylog|matchbrackets|morespace|mouse|multibuffer|noconvert|nofollow|nohelp|nonewlines|nowrap|operatingdir|poslog|preserve|punct)\>" "^[[:space:]]*(set|unset)[[:space:]]+(quickblank|quotestr|rebinddelete|rebindkeypad|regexp|smarthome|smooth|softwrap|speller|suspend|suspendenable|tabsize|tabstospaces|tempfile|undo|view|whitespace|wordbounds)\>"
-KEYWORD: "^[[:space:]]*(bind|i?color|set|unset|include|syntax|header|magic)\>"
-KEYWORD: "^[[:space:]]*i?color\>" "\<(start|end)="
-KEYWORD: "^(PLAIN|TYPE|STRING|NUMBER|BOOLEAN|VARIABLE|OPERATOR|~?KEYWORD):"
-KEYWORD: "^(REGEXP|FUNCTION|ESCAPE|COMMENT|ENABLED|DISABLED|WARNING):"
-ESCAPE:  "\\.?"
-COMMENT: "^[[:space:]]*#.*$"
+TYPE:     "^[[:space:]]*i?color[[:space:]]*(bright)?(white|black|red|blue|green|yellow|magenta|cyan)?(,(white|black|red|blue|green|yellow|magenta|cyan))?\>"
+KEYWORD:  "^[[:space:]]*(set|unset)[[:space:]]+(allow_insecure_backup|autoindent|backup|backupdir|backwards|boldtext|brackets|casesensitive|const|cut|fill|historylog|matchbrackets|morespace|mouse|multibuffer|noconvert|nofollow|nohelp|nonewlines|nowrap|operatingdir|poslog|preserve|punct)\>" "^[[:space:]]*(set|unset)[[:space:]]+(quickblank|quotestr|rebinddelete|rebindkeypad|regexp|smarthome|smooth|softwrap|speller|suspend|suspendenable|tabsize|tabstospaces|tempfile|undo|view|whitespace|wordbounds)\>"
+KEYWORD:  "^[[:space:]]*(bind|i?color|set|unset|include|syntax|header|magic)\>"
+KEYWORD:  "^[[:space:]]*i?color\>" "\<(start|end)="
+KEYWORD:  "^(PLAIN|TYPE|STRING|NUMBER|BOOLEAN|VARIABLE|OPERATOR|~?KEYWORD):"
+KEYWORD:  "^(REGEXP|FUNCTION|ESCAPE|COMMENT|ENABLED|DISABLED|WARNING):"
+FUNCTION: "^\+(TODO|LINT)$"
+ESCAPE:   "\\.?"
+COMMENT:  "^[[:space:]]*#.*$"
 
 +LINT
