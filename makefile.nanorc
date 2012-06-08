@@ -1,4 +1,4 @@
-syntax "makefile" "Makefile[^/]*$" "\.mk$"
+syntax "makefile" "[Mm]akefile[^/]*$" "\.mk$"
 
 OPERATOR: "[:=,]"
 KEYWORD:  "\<(ifeq|ifdef|ifneq|ifndef|else|endif)\>"
