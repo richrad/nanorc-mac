@@ -1,5 +1,5 @@
 syntax "yaml" "\.yaml$"
-header "^---" "%YAML"
+#header "^---" "%YAML"
 
 TYPE:     "(^| )!!(binary|bool|float|int|map|null|omap|seq|set|str) "
 BOOLEAN:  "\<(YES|yes|Y|y|TRUE|true|ON|on|NO|no|N|n|FALSE|false|OFF|off)\>"

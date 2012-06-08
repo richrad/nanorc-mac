@@ -1,4 +1,4 @@
-#!/bin/sed -f
+#!/usr/bin/sed -f
 
 s|^PLAIN:|color white|
 s|^TYPE:|color brightgreen|

@@ -1,5 +1,5 @@
 syntax "xml" "\.([jrs]html?|sgml?|xml|opml|xslt?)$"
-header "<\?xml"
+#header "<\?xml"
 
 FUNCTION: start="<" end=">"
 KEYWORD:  " [a-z_-]+="

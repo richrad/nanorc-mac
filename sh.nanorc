@@ -1,5 +1,5 @@
 syntax "sh" "\.sh$" "\.bash$" "bashrc$" "bash_profile$"
-header "^#!.*/(ba|k|pdk)?sh[-0-9_]*"
+#header "^#!.*/(ba|k|pdk)?sh[-0-9_]*"
 
 FUNCTION: "^[A-Za-z0-9_]+[[:space:]]*\(\)"
 KEYWORD:  "\<(case|do|done|elif|else|esac|exit|fi|for|function|if|in|local|read|return|select|shift|then|time|until|while)\>"

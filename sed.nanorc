@@ -1,5 +1,5 @@
 syntax "sed" "\.sed$"
-header "^#!.*bin/sed"
+#header "^#!.*bin/sed"
 
 OPERATOR: "[|^$.*+]"
 VARIABLE: "\{[0-9]+,?[0-9]*\}"

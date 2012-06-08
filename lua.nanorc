@@ -1,5 +1,5 @@
 syntax "lua" "\.lua$"
-header "^#!.*lua(jit)?$"
+#header "^#!.*lua(jit)?$"
 
 FUNCTION: "function\s+[A-Za-z0-9.:]+\s*\("
 FUNCTION: "\<(assert|collectgarbage|dofile|error|getmetatable|ipairs|load|loadfile|module|next|pairs|pcall|print|rawequal|rawget|rawset|require|select|setmetatable|tonumber|tostring|type|unpack|xpcall)\s*\("

@@ -1,5 +1,5 @@
 syntax "python" "\.py$" "jhbuildrc$"
-header "^#!.*/python[-0-9._]*"
+#header "^#!.*/python[-0-9._]*"
 
 FUNCTION: "def [A-Za-z0-9_]+"
 KEYWORD:  "\<(and|as|assert|break|class|continue|def|del|elif|else|except)\>"
